@@ -30,13 +30,11 @@ export default function Footer() {
                         {/* Social Media Links */}
                         {socialMediaLinks.map((link) => (
                             <Tooltip key={link.name}>
-                                <TooltipTrigger>
-                                    <a href={link.href} target="_blank" rel="noopener noreferrer">
+                                <TooltipTrigger render={<a href={link.href} target="_blank" rel="noopener noreferrer">
                                         <Button variant="outline" size="icon">
                                             <link.icon />
                                         </Button>
-                                    </a>
-                                </TooltipTrigger>
+                                    </a>} />
                                 <TooltipContent>
                                     <p>{link.name}</p>
                                 </TooltipContent>
